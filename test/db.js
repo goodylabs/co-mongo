@@ -62,8 +62,8 @@ describe('db', function () {
       co(function *() {
         var collections = yield db.collectionNames();
         var names = collections.map(function (name) { return name.name; });
-        names.should.containEql(setup.mongoName + '.test_collection');
-        names.should.match(new RegExp('^' + setup.mongoName + '.'));
+        names.should.containEql('test_collection');
+        names.should.containEql('system.indexes');
       })(done);
     });
   });

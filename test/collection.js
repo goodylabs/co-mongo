@@ -26,7 +26,6 @@ describe('collection', function () {
     it('should remove', function (done) {
       co(function *() {
         var res = yield test.remove({ hello: 'world' });
-        console.log("RES: ", res);
         res.should.be.type('object');
         res.should.have.length(2);
         res[0].should.equal(1);
