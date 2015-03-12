@@ -48,14 +48,14 @@ describe('db', function () {
     });
   });
 
-  describe('collectionsInfo', function () {
-    it('should return cursor', function (done) {
-      co(function *() {
-        var res = yield db.collectionsInfo();
-        res.should.be.instanceOf(comongo.Cursor);
-      })(done);
-    });
-  });
+  //describe('collectionsInfo', function () {
+    //it('should return cursor', function (done) {
+      //co(function *() {
+        //var res = yield db.collectionsInfo();
+        //res.should.be.instanceOf(comongo.Cursor);
+      //})(done);
+    //});
+  //});
 
   describe('collectionNames', function () {
     it('should return collection names', function (done) {
